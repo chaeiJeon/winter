@@ -24,7 +24,8 @@ const Layout = ({children}) =>{
                         return(
                             <Middle_card key={post.id} post={post}/>
                         );
-                    })}
+                    })
+                    }
                 </Col>
                 <Col xs={24} md={6}>
                     <Right />

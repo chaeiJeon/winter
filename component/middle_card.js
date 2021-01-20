@@ -1,11 +1,12 @@
 import React, {useState, useCallback} from 'react';
 import {Card} from 'antd';
 import {HeartOutlined, MessageOutlined, HeartTwoTone} from '@ant-design/icons';
+import useInput from '../hooks/useInput';
 
 const Middle_card = ({id, post}) =>{
     console.log(id,post);
-    const [liked, setLiked] = useState(false);
-    const [commentOpened, setCommentOpened] = useState(false);
+    const [liked, setLiked] = useInput(false);
+    const [commentOpened, setCommentOpened] = useInput(false);
     const onToggleLike = useCallback(() => {
         setLiked((prev)=>!prev);
     },[]);
@@ -25,7 +26,7 @@ const Middle_card = ({id, post}) =>{
                 
             </Card>
         </div>
-    )
+    );
 
 };
 export default Middle_card;
