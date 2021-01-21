@@ -21,9 +21,9 @@ const Signup = () => {
     const [password, onChangePassword] = useInput('');
     const [group, onChangeGroup] = useInput('');
     const [introduction, onChangeIntroduction]=useInput('');
-    const onSubmit = () =>[
-        console.log(id, password)
-    ]
+    const onSubmit = () =>{
+        console.log(id, password);
+    }
     return (
     <div style={{marginTop:50}}>
         <Row>

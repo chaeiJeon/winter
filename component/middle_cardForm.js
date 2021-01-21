@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Form, Button } from "antd"
+import { Input, Form, Button } from "antd";
 import useInput from '../hooks/useInput';
 
 const Middle_cardForm = () => {

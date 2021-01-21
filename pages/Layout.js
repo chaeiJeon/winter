@@ -1,13 +1,12 @@
 import React from 'react';
 import {Row, Col} from 'antd';
-import {useSelector} from 'react-redux';
-
+import {useSelector} from 'react-redux/lib/hooks/useSelector';
 import Left from '../component/left';
 import Middle_cardForm from '../component/middle_cardForm';
 import Middle_card from '../component/middle_card';
 import Right from '../component/right';
 
-const Layout = ({children}) =>{
+const Layout = () =>{
     const {mainPosts} = useSelector(state=>state.post);
 
     return (
