@@ -1,7 +1,11 @@
-import reducer from "./user";
-
 export const initialState = {
-    mainPosts : [],
+    mainPosts : [{
+        id:1,
+        User : {
+            id:1,
+        },
+        content : '첫번째',
+    }],
     imgagePaths : [],
     postAdded : false,
 };
@@ -11,14 +15,12 @@ export const addPost = {
 };
 const dummyPost = {
     id:2,
-    content : '더미',
     User : {
-        id:1
+        id:1,
     },
-    Images : [],
-    Comments : [],
+    content : '더미',
 };
-export default (state=initialState, action)=>{
+const reducers = (state=initialState, action)=>{
     switch(action.type){
         case ADD_POST:
             return{
@@ -33,3 +35,4 @@ export default (state=initialState, action)=>{
         }
     }
 };
+export default reducers;

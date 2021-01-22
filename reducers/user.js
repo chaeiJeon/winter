@@ -8,7 +8,11 @@ export const loginAction = (data) => {
         data,
     }
 }
-const reducer = (state=initial, action)=>{
+const dummyUser = {
+    id:1,
+    isLoggedIn : true,
+}
+const reducer = (state=initialState, action)=>{
     switch(action.type){
         case 'LOG_IN':
             return{

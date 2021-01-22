@@ -20,7 +20,7 @@ const Login = () => {
     const dispatch = useDispatch();
     const [id, onChangeId]=useInput('');
     const [password, onChangePassword]=useInput('');
-
+    
     const onSubmitForm = useCallback(()=>{
         console.log(id,password);
         dispatch(loginAction({id,password}));
@@ -53,18 +53,17 @@ const Login = () => {
         <Form.Item {...tailLayout} name="remember" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>
         </Form.Item>
-
         <Form.Item {...tailLayout} >
             <Link href="/Layout">
-            <Button type="primary" htmlType="submit">
-            Submit
+            <Button type="primary" htmlType="submit" >
+                Submit
             </Button>
             </Link>
         </Form.Item>
 
         <Form.Item {...tailLayout}>
             <Link href="/signup">
-            <Button type="primary" ghost htmlType="submit">
+            <Button type="primary" ghost>
             회원가입
             </Button>
             </Link>
