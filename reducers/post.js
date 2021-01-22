@@ -1,3 +1,5 @@
+import reducer from "./user";
+
 export const initialState = {
     mainPosts : [],
     imgagePaths : [],

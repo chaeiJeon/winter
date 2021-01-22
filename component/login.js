@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import {Form, Input, Button, Checkbox } from 'antd';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../reducers/user';
+import useInput from '../hooks/useInput';
 
 const layout = {
     labelCol: { span: 8 },
@@ -12,18 +15,29 @@ const tailLayout = {
 };
 
 
+
 const Login = () => {
+    const dispatch = useDispatch();
+    const [id, onChangeId]=useInput('');
+    const [password, onChangePassword]=useInput('');
+
+    const onSubmitForm = useCallback(()=>{
+        console.log(id,password);
+        dispatch(loginAction({id,password}));
+    },[id, password]);
+
     return (
         <Form 
         {...layout}
         name="basic"
         initialValues={{ remember: true }}
+        onFinish={onSubmitForm}
         >
         
         <Form.Item
-                label="Username"
-                name="username"
-                rules={[{ required: true, message: 'Please input your username!' }]}
+                label="ID"
+                name="id"
+                rules={[{ required: true, message: 'Please input your id!' }]}
         >
         <Input />
         </Form.Item>

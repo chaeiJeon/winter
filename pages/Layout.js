@@ -1,13 +1,12 @@
 import React from 'react';
 import {Row, Col} from 'antd';
-import {useSelector} from 'react-redux/lib/hooks/useSelector';
+import {useSelector} from 'react-redux';
 import Left from '../component/left';
 import Middle_cardForm from '../component/middle_cardForm';
 import Middle_card from '../component/middle_card';
 import Right from '../component/right';
 
 const Layout = () =>{
-    const {mainPosts} = useSelector(state=>state.post);
 
     return (
         <div style={{padding:30}}>
@@ -19,12 +18,7 @@ const Layout = () =>{
                 <Col xs={24} md={12}>
                     <Middle_cardForm/>
                     <div style={{marginBottom:70}}/>
-                    {mainPosts.map((post)=>{
-                        return(
-                            <Middle_card key={post.id} post={post}/>
-                        );
-                    })
-                    }
+                    
                 </Col>
                 <Col xs={24} md={6}>
                     <Right />
