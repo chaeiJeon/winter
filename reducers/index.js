@@ -17,7 +17,5 @@ const rootReducer = combineReducers({
     //HYDRATE(server side rendering을 위해 사용)를 위한 reducer 추가
     user,
     post,
-    //user,post combine
 });
-// reducer가 함수이기 때문에, 함수끼리 합치려면 combineReducer의 도움을 받아야함
 export default rootReducer;
