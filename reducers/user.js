@@ -3,6 +3,7 @@ export const initialState = {
     me : null,
 }
 export const loginAction = (data) => {
+    console.log('로그인액션');
     return { 
         type : 'LOG_IN',
         data,
@@ -15,6 +16,7 @@ const dummyUser = {
 const reducer = (state=initialState, action)=>{
     switch(action.type){
         case 'LOG_IN':
+            console.log('login reducer');
             return{
                 ...state,
                 isLoggedIn : true,

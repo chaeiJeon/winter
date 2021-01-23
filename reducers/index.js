@@ -9,8 +9,8 @@ const rootReducer = combineReducers({
             case HYDRATE :
                 console.log('HYDRATE', action);
                 return { ...state, ...action.payload }
-        default:
-            return state;
+            default:
+                return state;
         }
     },
     //HYDRATE(server side rendering을 위해 사용)를 위한 reducer 추가

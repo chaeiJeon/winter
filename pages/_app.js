@@ -9,7 +9,7 @@ const App = ({Component}) =>{
     return(
         <>
         <Head>
-            <title>LOGIN</title>
+            <title>CHAEI</title>
         </Head>
         <Component />
         </>

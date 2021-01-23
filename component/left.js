@@ -1,12 +1,15 @@
 import { Card, Avatar, Checkbox} from 'antd';
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 const { Meta } = Card;
-
+import {useSelector} from 'react-redux';
+import Login from '../component/login';
 
 const Left = () => {
+    const isLoggedIn = useSelector(state => state.user);
+    console.log(isLoggedIn);
     return (
         <>
-        <Card
+        {isLoggedIn ? (<Card
         cover={
         <img
             alt="example"
@@ -21,15 +24,12 @@ const Left = () => {
         >
         <Meta
         avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-        title="Four Sexy Girls"
-        description="문율경채 스토리"
+        title="Four"
+        description="스토리"
         />
-        </Card>
-        <div style={{marginTop:25}}>
-        <Checkbox>치즈</Checkbox>
-        <Checkbox style={{marginnBottom:20}}>노치즈</Checkbox>
-   
-        </div>
+        </Card>) 
+        : <Login />
+        }
         </>
     )
 };

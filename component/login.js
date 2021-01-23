@@ -39,7 +39,7 @@ const Login = () => {
                 name="id"
                 rules={[{ required: true, message: 'Please input your id!' }]}
         >
-        <Input />
+        <Input onChange={onChangeId}/>
         </Form.Item>
 
         <Form.Item
@@ -47,18 +47,16 @@ const Login = () => {
             name="password"
             rules={[{ required: true, message: 'Please input your password!' }]}
         >
-        <Input.Password />
+        <Input.Password onChange={onChangePassword}/>
         </Form.Item>
 
         <Form.Item {...tailLayout} name="remember" valuePropName="checked">
             <Checkbox>Remember me</Checkbox>
         </Form.Item>
         <Form.Item {...tailLayout} >
-            <Link href="/Layout">
             <Button type="primary" htmlType="submit" >
                 Submit
             </Button>
-            </Link>
         </Form.Item>
 
         <Form.Item {...tailLayout}>

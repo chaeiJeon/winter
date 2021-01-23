@@ -2,9 +2,10 @@ export const initialState = {
     mainPosts : [{
         id:1,
         User : {
-            id:1,
+            id: 111,
         },
         content : '첫번째',
+        
     }],
     imgagePaths : [],
     postAdded : false,
